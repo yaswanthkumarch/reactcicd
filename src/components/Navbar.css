@@ -1,0 +1,71 @@
+/* General Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo h2 {
+    margin: 0;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 2rem;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #ff6347;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      display: none; /* Initially hidden */
+    }
+  
+    .navbar .nav-links.mobile {
+      display: flex; /* Display when mobile menu is active */
+    }
+  
+    .navbar .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
